@@ -9,8 +9,7 @@ from w3lib.html import replace_escape_chars
 
 def convert_base64_to_binary(base64_string):
     base64_bytes = base64_string.encode("ascii")
-    message_bytes = base64.b64decode(base64_bytes)
-    return message_bytes
+    return base64.b64decode(base64_bytes)
 
 
 
