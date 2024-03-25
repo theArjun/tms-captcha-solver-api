@@ -28,3 +28,22 @@ exclude=[
 [tool.ruff]
 exclude = [".venv"]
 line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+lines_after_imports = 2
+skip = ["migrations", ".venv"]
+sections = ["FUTURE", "STDLIB", "FRAMEWORK", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+default_section = "THIRDPARTY"
+known_first_party = ["utils"]
+indent = "    "
+multi_line_output = 3
+length_sort = false
+include_trailing_comma = true
+use_parentheses = true
+from_first = false
+force_single_line = false
+force_grid_wrap = 2  # setting to 'true' is not valid in TOML; you can use 0 or 2 based on your preference.
+balanced_wrapping = false
+combine_as_imports = true
