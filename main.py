@@ -22,7 +22,7 @@ async def decode_captcha(captcha: Captcha):
     try:
         response_binary = convert_base64_to_binary(captcha.base64Image)
         captcha_text = await decode_captcha_from_binary(response_binary)
-    except Exception as e:
+    except Exception:
         is_valid = False
         captcha_text = ""
 
