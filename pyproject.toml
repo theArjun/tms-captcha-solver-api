@@ -1,0 +1,30 @@
+[tool.pyright]
+# from https://microsoft.github.io/pyright/#/configuration?id=sample-pyprojecttoml-file
+typeCheckingMode = "standard"
+useLibraryCodeForTypes = true
+venvPath = ".venv"
+include = ["utils"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+stubPath = "typings"
+pythonVersion = "3.11"
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+no_implicit_optional = true
+strict_optional = true
+follow_imports = "silent"
+warn_redundant_casts = true
+warn_unused_configs = true
+exclude=[
+    ".venv",
+]
+
+[tool.ruff]
+exclude = [".venv"]
+line-length = 120
