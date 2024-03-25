@@ -22,15 +22,6 @@ app.add_middleware(
 
 @app.post("/")
 async def decode_captcha(captcha: Captcha):
-    is_valid = True
-    try:
-        response_binary = convert_base64_to_binary(captcha.base64Image)
-        captcha_text = await decode_captcha_from_binary(response_binary)
-    except Exception:
-        is_valid = False
-        captcha_text = ""
-
-    return {
-        "is_valid": is_valid,
-        "result": captcha_text,
-    }
+    response_binary = convert_base64_to_binary(captcha.base64Image)
+    captcha_text = await decode_captcha_from_binary(response_binary)
+    return {"result": captcha_text}
