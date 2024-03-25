@@ -1,16 +1,17 @@
+import base64
 import string
 from io import BytesIO
-import base64
+
 import cv2
 import numpy as np
 import pytesseract
 from PIL import Image
 from w3lib.html import replace_escape_chars
 
+
 def convert_base64_to_binary(base64_string):
     base64_bytes = base64_string.encode("ascii")
     return base64.b64decode(base64_bytes)
-
 
 
 async def decode_captcha_from_binary(response_binary):

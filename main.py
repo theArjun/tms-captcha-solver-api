@@ -16,7 +16,7 @@ app.add_middleware(
 )
 
 
-@app.post("/decode")
+@app.post("/")
 async def decode_captcha(captcha: Captcha):
     is_valid = True
     try:
