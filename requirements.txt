@@ -3,3 +3,4 @@ opencv-python==4.8.0.74
 fastapi==0.99.1
 pytesseract==0.3.10
 w3lib==2.1.1
+uvicorn==0.27.1
