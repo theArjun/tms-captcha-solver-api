@@ -2,7 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from schemas import Captcha
-from utils.captcha import convert_base64_to_binary, decode_captcha_from_binary
+from utils.captcha import (
+    convert_base64_to_binary,
+    decode_captcha_from_binary,
+)
+
 
 CAPTCHA_LENGTH = 6
 
