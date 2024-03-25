@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-RUN apt-get update && apt-get install libgl1-mesa-glx libglib2.0-0 -y
+RUN apt-get update && apt-get install libgl1-mesa-glx libglib2.0-0 tesseract-ocr tesseract-ocr-eng -y
 
 WORKDIR /app
 
