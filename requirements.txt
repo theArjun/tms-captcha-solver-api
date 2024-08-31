@@ -1,5 +1,5 @@
 numpy==1.25.0
-opencv-python==4.8.0.74
+opencv-python==4.8.1.78
 fastapi==0.109.1
 pytesseract==0.3.10
 w3lib==2.1.1
